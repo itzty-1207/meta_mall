@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "Search":"../../components/Search/Search",
+    "Tabs":"../../components/Tabs/Tabs"
+  },
+  "navigationBarTitleText": "meta列表",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark"
+}

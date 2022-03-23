@@ -1,0 +1,31 @@
+<view>
+  <Tabs tabs="{{tabs}}" bindtabsItemChange="handleTabsItemChange">
+    <view class="collect-main">
+      <view class="collect-title">
+        <text class="collect-tips active">全部</text>
+        <text class="collect-tips">正在热卖</text>
+        <text class="collect-tips">即将上线</text>
+      </view>
+      <view class="collect-content">
+        <navigator 
+          class="goods-item"
+          wx:for="{{collect}}"
+          wx:key="goods_id"
+          url="/pages/goods_detail/goods_detail?goods_id={{item.goods_id}}"
+        >
+          <view class="goods-img-wrap">
+            <image 
+              mode="widthFix" 
+              src="{{item.goods_small_logo ? item.goods_small_logo : 'https://img.alicdn.com/imgextra/i4/1714128138/O1CN01uJIO9R29zFrZsNmvV_!!0-item_pic.jpg_430x430q90.jpg'}}">
+            </image>
+          </view>
+          <view class="goods-info-wrap">
+            <view class="goods-name">{{item.goods_name}}</view>
+            <view class="goods-price">￥{{item.goods_price}}</view>
+          </view>
+        </navigator>
+      </view>
+    </view>
+  </Tabs>
+</view>
+
